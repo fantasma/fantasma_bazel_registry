@@ -1,0 +1,18 @@
+diff -uraN a/bzlmod/BUILD b/bzlmod/BUILD
+--- a/bzlmod/BUILD	1970-01-01 00:00:00.000000000 +0000
++++ b/bzlmod/BUILD	2022-02-20 00:00:00.000000000 +0000
+@@ -0,0 +1 @@
++
+diff -uarN a/bzlmod/extensions.bzl b/bzlmod/extensions.bzl
+--- a/bzlmod/extensions.bzl	1970-01-01 00:00:00.000000000 +0000
++++ b/bzlmod/extensions.bzl	2022-02-20 00:00:00.000000000 +0000
+@@ -0,0 +1,9 @@
++
++load("@rules_fuzzing//fuzzing:init.bzl", _rules_fuzzing_init = "rules_fuzzing_init")
++
++def _rules_fuzzing_init_impl(ctx):
++  _rules_fuzzing_init()
++
++rules_fuzzing_init = module_extension(
++  implementation = _rules_fuzzing_init_impl,
++)
