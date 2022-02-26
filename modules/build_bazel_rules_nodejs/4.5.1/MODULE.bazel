@@ -1,5 +1,5 @@
 module(
-    name = "bazel_build_rules_nodejs",
+    name = "build_bazel_rules_nodejs",
     version = "4.5.1",
     compatibility_level = 1,
     # If the user doesn't register any node toolchains,
