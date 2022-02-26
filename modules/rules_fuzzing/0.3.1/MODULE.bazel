@@ -1,11 +1,13 @@
 module(
     name = "rules_fuzzing",
     version = "0.3.1",
+    compatibility_level = 1,
 )
 
 bazel_dep(name = "abseil-cpp", version = "20210324.2")
 bazel_dep(name = "bazel_skylib", version = "1.0.3")
 bazel_dep(name = "platforms", version = "0.0.4")
+bazel_dep(name = "rules_cc", version = "0.0.1")
 bazel_dep(name = "rules_python", version = "0.4.0")
 
 rules_fuzzing_init = use_extension("@rules_fuzzing//bzlmod:extensions.bzl", "rules_fuzzing_init")
