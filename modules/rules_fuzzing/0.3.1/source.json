@@ -2,7 +2,7 @@
   "url": "https://github.com/bazelbuild/rules_fuzzing/archive/v0.3.1.zip",
   "integrity": "sha256-I7sHQGTG9IjRIESTSrGwYx6OaJjVzy9r3gh62wERFXM=",
   "patches": {
-    "propagate_rules_fuzzing_init.patch": "sha256-nwOlnjSY8TWn7SUuGKEVWiC0bCEKl5+nrmYV/neULVs="
+    "propagate_rules_fuzzing_init.patch": "sha256-VF2ajhdF7otEXB9wIhXqFS09Axgp/2SPUTu9ufS3mQU="
   },
   "patch_strip": 1,
   "strip_prefix": "rules_fuzzing-0.3.1"
