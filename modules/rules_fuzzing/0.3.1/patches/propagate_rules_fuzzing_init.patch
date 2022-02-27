@@ -6,11 +6,13 @@ diff -uraN a/bzlmod/BUILD b/bzlmod/BUILD
 diff -uarN a/bzlmod/extensions.bzl b/bzlmod/extensions.bzl
 --- a/bzlmod/extensions.bzl	1970-01-01 00:00:00.000000000 +0000
 +++ b/bzlmod/extensions.bzl	2022-02-20 00:00:00.000000000 +0000
-@@ -0,0 +1,9 @@
+@@ -0,0 +1,11 @@
 +
 +load("@rules_fuzzing//fuzzing:init.bzl", _rules_fuzzing_init = "rules_fuzzing_init")
++load("//fuzzing/private/oss_fuzz:repository.bzl", "oss_fuzz_repository")
 +
 +def _rules_fuzzing_init_impl(ctx):
++  oss_fuzz_repository(name = "rules_fuzzing_oss_fuzz")
 +  _rules_fuzzing_init()
 +
 +rules_fuzzing_init = module_extension(
