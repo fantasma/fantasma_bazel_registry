@@ -9,10 +9,10 @@ module(
     toolchains_to_register = ["@default_node16_toolchains//:all"],
 )
 
-bazel_dep(name = "bazel_skylib", version = "1.0.3")
+bazel_dep(name = "bazel_skylib", version = "1.1.1")
 bazel_dep(name = "platforms", version = "0.0.4")
 
 node = use_extension("@rules_nodejs//nodejs:extensions.bzl", "node")
-node.toolchain(name = "default_node16", node_version = "16.10.0")
+node.toolchain(name = "default_node16", node_version = "16.15.0")
 use_repo(node, "default_node16_toolchains")
 
